@@ -1,4 +1,4 @@
-<div id="<%= dom_id episode %>">
+<div id="<%= dom_id episode %>" style="margin-top:20em">
   <p>
     <strong>Title:</strong>
     <%= episode.title %>
@@ -6,7 +6,19 @@
 
   <p>
     <strong>File:</strong>
-    <%= audio_tag(url_for(episode.file), controls: true) %>
+    <% # <%= audio_tag(url_for(episode.file), controls: true) %>
+    <%= content_tag(:div, "", data: {
+                                        controller: "podcast",
+                                        podcast_title: episode.title,
+                                        podcast_url: url_for(episode.file),
+                                      #  podcast_chapters: episode.chapters.map do |chapter|
+                                      #    {
+                                      #      title: chapter.title,
+                                      #      startTime: chapter.start,
+                                      #      endTime: chapter.end,
+                                      #    }
+                                      #  end,
+                                      }) %>
   </p>
 
   <p>
