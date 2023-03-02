@@ -75,3 +75,5 @@ group :test do
 end
 
 gem "dotenv-rails", "~> 2.8"
+
+gem "simple_form", "~> 5.2"
