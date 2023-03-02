@@ -5,6 +5,11 @@
   </p>
 
   <p>
+    <strong>File:</strong>
+    <%= audio_tag(url_for(episode.file), controls: true) %>
+  </p>
+
+  <p>
     <strong>Description:</strong>
     <%= episode.description %>
   </p>
