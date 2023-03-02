@@ -75,5 +75,6 @@ group :test do
 end
 
 gem "dotenv-rails", "~> 2.8"
-
+gem "foreman", github: "ddollar/foreman"
+# gem "foreman", "~> 0.87.2"
 gem "simple_form", "~> 5.2"
